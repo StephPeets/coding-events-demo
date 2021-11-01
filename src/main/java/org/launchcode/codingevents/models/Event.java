@@ -1,8 +1,5 @@
 package org.launchcode.codingevents.models;
 
-/**
- * Created by Chris Bay
- */
 public class Event {
 
 	private int id;
@@ -14,17 +11,17 @@ public class Event {
 	public Event(String name, String description) {
 		this.name = name;
 		this.description = description;
-        this.id = nextId;
-        nextId++;
+		this.id = nextId;
+		nextId++;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public String getDescription() {
 		return description;
@@ -34,11 +31,11 @@ public class Event {
 		this.description = description;
 	}
 
-    public int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    @Override
+	@Override
 	public String toString() {
 		return name;
 	}
