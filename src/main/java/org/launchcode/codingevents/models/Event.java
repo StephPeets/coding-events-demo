@@ -24,10 +24,13 @@ public class Event {
 	@Email(message = "Invalid email. Please Try again.")
 	private String contactEmail;
 
+	@NotBlank(message = "Please provide a location for this event.")
+	@Size(max = 50, message = "Description must be 50 characters or less.")
+	private String location;
 
-
-	public Event(String name, String description, String contactEmail) {
+	public Event(String name, String location, String description, String contactEmail) {
 		this.name = name;
+		this.location = location;
 		this.description = description;
 		this.contactEmail = contactEmail;
 		this.id = nextId;
@@ -47,6 +50,14 @@ public class Event {
 		this.name = name;
 	}
 
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -57,6 +68,10 @@ public class Event {
 
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getContactEmail() {
@@ -84,4 +99,6 @@ public class Event {
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+
+
 }
