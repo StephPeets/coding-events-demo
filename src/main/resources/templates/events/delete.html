@@ -11,6 +11,9 @@
         <div class="form-group">
         <label>
             <span th:text="${event.name}"></span>
+            <br>
+            <span th:text="${event.eventDetails.description}"></span>
+
             <input type="checkbox" name="eventIds" th:value="${event.id}" class="form-control">
         </label>
         </div>
