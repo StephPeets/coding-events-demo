@@ -55,7 +55,7 @@ public class EventController {
 				model.addAttribute("title", "Invalid Tag ID: " + tagId);
 			} else {
 				Tag tag = result.get();
-				model.addAttribute("title", "Events with tag: " + tag.getName());
+				model.addAttribute("title", "#" + tag.getName());
 				model.addAttribute("events", tag.getEvents());
 			}
 		}
